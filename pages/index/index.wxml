@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="sug_info">
+    <!-- <text>{{sugData}}</text> -->
+  </view>
+  <swiper class='sw' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color='white' indicator-active-color='balck'>
+    <block wx:for-items="{{banner_list[0].banner}}">
+      <swiper-item>
+        <image src="{{item.pic_url}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- <view>
+  </view> -->
+  <view class='separator'></view>
+  <view class='hotgoodcontainer'>
+    <view class='gooditem' bindtap='redirto' data-pagename="{{good.pagename}}" wx:for="{{hotgoods}}" wx:for-index="idx" wx:for-item="good">
+      <view class='imgview'>
+        <image class='productimg' src='{{good.pic_url}}' />
+      </view>
+      <view>{{good.name}}</view>
+    </view>
+  </view>
+</view>

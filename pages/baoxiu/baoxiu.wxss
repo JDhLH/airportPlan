@@ -1,0 +1,61 @@
+/* pages/baoxiu/baoxiu.wxss */
+.meanu{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.picker{
+  height:100rpx;
+  text-align: center;
+  border: 1px solid lightgray;
+}
+.weui-input{
+  width: 100%;
+  
+}
+.section{
+  width: 100%;
+}
+textarea {
+  width: 700rpx;
+  padding: 25rpx 0;
+}
+
+.textarea-wrp {
+  padding: 0 25rpx;
+  background-color: #fff;
+}
+
+.page-section{
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+
+.page-section:last-child{
+  margin-bottom: 0;
+}
+
+.page-section-title{
+  font-size: 28rpx;
+  color: #999999;
+  margin-bottom: 10rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.title{
+  height: 80rpx;
+  background-color:   #eaeae1;
+}
+.success{
+  text-align: center;
+  line-height: 100px;
+  font-size:20px;
+}
+
+success-icon{
+  position: relative;
+  top:10px;
+  margin-right: 10px;
+
+}

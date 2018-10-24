@@ -1,0 +1,22 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 720rpx;
+  position: absolute;
+  left: 15rpx;
+  top: 15rpx;
+  border:1px solid rgb(196, 187, 187)
+}
+.title{
+  height: 60rpx;
+  border-bottom:1px solid rgb(196, 187, 187)
+}
+.content{
+  height: 600rpx;
+  border-bottom:1px solid rgb(196, 187, 187)
+}
+.date{
+  height: 60rpx;
+  
+}

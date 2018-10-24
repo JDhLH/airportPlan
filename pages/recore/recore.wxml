@@ -1,0 +1,70 @@
+<!-- <view class='top'>报修记录</view>
+<view class='main'>
+<view bindtap='topage' class='recorelist'>
+  <view class='title'>
+    <text>动力叉车轮胎损坏</text>
+    <view class='status'>已受理</view>
+  </view>
+  <view>报修时间：2018-9-12</view>
+  <view>故障类型：机械设备故障</view>
+</view>
+<view class='line'></view>
+
+<view bindtap='topage' class='recorelist'>
+  <view class='title'>
+    <text>动力叉车轮胎损坏</text>
+    <view class='status'>已受理</view>
+  </view>
+  <view>报修时间：2018-9-12</view>
+  <view>故障类型：机械设备故障</view>
+</view>
+<view bindtap='topage' class='line'></view>
+
+<view bindtap='topage' class='recorelist'>
+  <view class='title'>
+    <text>动力叉车轮胎损坏</text>
+    <view class='status'>已受理</view>
+  </view>
+  <view>
+    <text>报修时间：2018-9-12</text>
+    <view class='right'></view>
+  </view>
+  <view>故障类型：机械设备故障</view>
+</view>
+<view class='line'></view>
+
+<view bindtap='topage' class='recorelist'>
+  <view class='title'>
+    <text>动力叉车轮胎损坏</text>
+    <view class='status'>已受理</view>
+  </view>
+  <view>报修时间：2018-9-12</view>
+  <view>故障类型：机械设备故障</view>
+</view>
+<view class='line'></view>
+
+<view bindtap='topage' class='recorelist'>
+  <view class='title'>
+    <text>动力叉车轮胎损坏</text>
+    <view class='status'>已受理</view>
+  </view>
+  <view>报修时间：2018-9-12</view>
+  <view>故障类型：机械设备故障</view>
+</view>
+<view class='line'></view>
+</view> -->
+
+<view class='top'>报修记录</view>
+<view class='main'>
+<view  wx:for='{{rpPhone}}'>
+<view bindtap='topage' class='recorelist'>
+  <view class='title'>
+    <text>{{item.describe_info}}</text>
+    <view class='status'>{{item.process.process_name}}</view>
+  </view>
+  <view>报修时间：{{item.time}}</view>
+  <view>故障类型：{{item.faultType.fault_name}}</view>
+</view>
+<view class='line'></view>
+</view>
+</view>

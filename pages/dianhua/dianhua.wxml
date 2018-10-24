@@ -1,0 +1,64 @@
+<!-- pages/dianhua/dianhua.wxml -->
+<!-- <view class='main'> -->
+  <!-- <view class='content'>
+    <text>机电队</text>
+    <view class='phone'>
+    <image src='/pages/image/calllogshortcut.png' style='width:70rpx;height:70rpx'></image>
+    <view bindtap='tel_机电队'>5965</view>
+    </view>
+  </view>
+  <view class='line'></view>
+
+  <view class='content'>
+    <text>暖通对</text>
+    <view class='phone'>
+    <image src='/pages/image/calllogshortcut.png' style='width:70rpx;height:70rpx'></image>
+    <view bindtap='tel_暖通队'>5965</view>
+    </view>
+  </view>
+  <view class='line'></view>
+
+  <view class='content'>
+    <text>电力队</text>
+    <view class='phone'>
+    <image src='/pages/image/calllogshortcut.png' style='width:70rpx;height:70rpx'></image>
+    <view bindtap='tel_电力队'>5965</view>
+    </view>
+  </view>
+  <view class='line'></view>
+
+  <view class='content'>
+    <text>综合队</text>
+    <view class='phone'>
+    <image src='/pages/image/calllogshortcut.png' style='width:70rpx;height:70rpx'></image>
+    <view bindtap='tel_综合队'>5965</view>
+    </view>
+  </view>
+  <view class='line'></view>
+
+  <view class='content'>
+    <text>汽车修理厂</text>
+    <view class='phone'>
+    <image src='/pages/image/calllogshortcut.png' style='width:70rpx;height:70rpx'></image>
+    <view bindtap='tel_汽车修理厂'>596</view>
+    </view>
+  </view> -->
+  <!-- <view class='line'></view>
+
+  <view class='line'></view> -->
+<!-- </view> -->
+
+<view class='main'>
+<view wx:for='{{sdPhone}}' id='{{item.repair_phone}}' bindtap='phoneCall' >
+  <view class='content' >
+    <text>{{item.department_name}}</text>
+    <view class='phone' >
+    <image src='/pages/image/calllogshortcut.png' style='width:70rpx;height:70rpx'></image>
+    <view  >{{item.repair_phone}}</view>
+    </view>
+    
+  </view>
+  <view class='line'></view>
+</view>
+  
+</view>

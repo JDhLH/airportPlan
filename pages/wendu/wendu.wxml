@@ -1,0 +1,13 @@
+<view>
+
+  <view class='top'>区域温度</view>
+
+  <view class='arealist'>
+    <view wx:for="{{list}}" class='item' bindtap='handleRefresh' id='{{item.id}},{{item.location_name}}' >
+      <view class='location_name'>{{item.location_name}}</view>
+      <view class='detail'>当前区域温度：{{item. temperature}}</view>
+      <view class='detail'>更新时间：{{item.datetime}}</view>
+    </view>
+  </view>
+
+</view>

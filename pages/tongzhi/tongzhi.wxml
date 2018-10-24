@@ -1,0 +1,6 @@
+<view class='main'wx:for='{{noticesinfo}}'>
+    <view class='title'>{{noticesinfo.title}}</view>
+    <view class='content'>{{noticesinfo.infor}}</view>
+    <view class='date'>{{noticesinfo.datetime}}</view>
+</view>
+

@@ -1,0 +1,43 @@
+<view class='main'>
+  <!-- <view class='content'>
+    <view>部门：机电队</view>
+    <view>报修电话：5965</view>
+    <view>服务内容：机电故障设备</view>
+  </view>
+
+  <view class='content'>
+    <view>部门：机电bdfzbdfxhnxdfx队</view>
+    <view>报修电话：5965</view>
+    <view>服务内容：机电故障设备</view>
+  </view>
+
+  <view class='content'>
+    <view>部门：机电bdfzbdfxhnxdfx队</view>
+    <view>报修电话：5965</view>
+    <view>服务内容：机电故障设备</view>
+  </view>
+
+  <view class='content'>
+    <view>部门：机电bdfzbdfxhnxdfx队</view>
+    <view>报修电话：5965</view>
+    <view>服务内容：机电故障设备</view>
+  </view>
+
+  <view class='content'>
+    <view>部门：机电bdfzbdfxhnxdfx队</view>
+    <view>报修电话：5965</view>
+    <view>服务内容：机电故障设备</view>
+  </view>
+
+  <view class='content'>
+    <view>部门：机电bdfzbdfxhnxdfx队</view>
+    <view>报修电话：5965</view>
+    <view>服务内容：机电故障设备</view>
+  </view> -->
+  <view class='content' wx:for='{{sdDepartment}}'>
+    <view>部门：{{item.department_name}}</view>
+    <view>联系电话：{{item.repair_phone}}</view>
+    <view>上报时间：{{item.service_info}}</view>
+  </view>
+  
+</view>

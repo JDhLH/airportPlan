@@ -1,0 +1,51 @@
+/* pages/recore/recore.wxss */
+.top{
+  height: 80rpx;
+  width: 100%;
+  background-color: rgb(236, 237, 238);
+  position: fixed;
+  text-align: center;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80rpx;
+  width: 100%;
+}
+.recorelist {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.line {
+  width: 100%;
+  height: 5rpx;
+  background: #cff;
+  margin-top: 20rpx;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+}
+
+.status {
+  position: absolute;
+  text-align: center;
+  left: 550rpx;
+  border: 0 solid transparent;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  width: 180rpx;
+  height: 60rpx;
+  background: rgb(14, 230, 111);
+}
+
+.right {
+
+}

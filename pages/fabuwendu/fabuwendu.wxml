@@ -1,0 +1,19 @@
+<view wx:if="{{!success}}">
+  <view class='title'>
+    <view class='row'>区域</view>
+    <view class='info'>{{location_name}}</view>
+  </view>
+
+  <view class='title'>
+    <view class='row'>温度</view>
+    <view class="info">
+      <input class='info-input' bindinput='handleTempChange' placeholder='清输入当前区域温度'></input>
+    </view>
+  </view>
+  <view class='button' bindtap='handleSubmit'>发布当前区域温度</view>
+</view>
+
+<view wx:if="{{success}}">
+  <view class='success'> <icon type='success' size="24" class='success-icon'></icon>提交成功</view>
+  <button type="primary"  bindtap="handleBackTap" > 返回首页 </button>
+</view>

@@ -1,0 +1,61 @@
+<!-- <view class='recorelist'>
+  <view class='title'>
+    <text>值机大厅1号电表</text>
+    <view class='status'>汽油</view>
+  </view>
+  <view>超表时间：2018-9-12</view>
+  <view>当前数值：2333.5</view>
+</view>
+<view class='line'></view>
+
+<view class='recorelist'>
+  <view class='title'>
+    <text>动力叉车轮胎损坏</text>
+    <view class='status'>燃气</view>
+  </view>
+  <view>超表时间：2018-9-12</view>
+  <view>当前数值：2333.5</view>
+</view>
+<view class='line'></view>
+
+<view class='recorelist'>
+  <view class='title'>
+    <text>动力叉车轮胎损坏</text>
+    <view class='status'>燃气</view>
+  </view>
+  <view>超表时间：2018-9-12</view>
+  <view>当前数值：2333.5</view>
+</view>
+<view class='line'></view>
+
+<view class='recorelist'>
+  <view class='title'>
+    <text>动力叉车轮胎损坏</text>
+    <view class='status'>电表</view>
+  </view>
+  <view>超表时间：2018-9-12</view>
+  <view>当前数值：2333.5</view>
+</view>
+<view class='line'></view>
+
+<view class='recorelist'>
+  <view class='title'>
+    <text>动力叉车轮胎损坏</text>
+    <view class='status'>电表</view>
+  </view>
+  <view>超表时间：2018-9-12</view>
+  <view>当前数值：2333.5</view>
+</view>
+<view class='line'></view> -->
+
+  <view  wx:for='{{waterMeter}}'>
+    <view class='recorelist'>
+      <view class='title'>
+        <text>{{item.location}}</text>
+        <view class='status'>{{item.energy_type}}</view>
+      </view>
+      <view>超表时间：{{item.datetime}}</view>
+      <view>当前数值：{{item.number}}</view>
+    </view>
+    <view class='line'></view>
+  </view>

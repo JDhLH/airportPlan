@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    
+    "pages/baoxiuqingdan/baoxiuqingdan",
+    "pages/wendu/wendu",
+    "pages/zhiban/zhiban",
+    "pages/gongzuoshangbao/gongzuoshangbao",
+    "pages/chaobiao/chaobiao",
+    "pages/dianhua/dianhua",
+    "pages/bumenfuwu/bumenfuwu",
+    "pages/tongzhi/tongzhi",
+    "pages/recore/recore",
+    "pages/baoxiu/baoxiu",
+    "pages/logs/logs",
+    "pages/fabuwendu/fabuwendu",
+    "pages/user/user"
+  ],
+  "cloud": true,
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff3333",
+    "navigationBarTitleText": "桂林机场维修服务平台",
+    "navigationBarTextStyle": "white"
+  },
+
+  "tabBar": {
+    "borderStyle":"#000",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/image/tubiao/tools.png",
+        "selectedIconPath": "pages/image/tubiao/tools.png"
+      },
+      {
+        "pagePath": "pages/baoxiuqingdan/baoxiuqingdan",
+        "iconPath": "pages/image/tubiao/clipboard45.png",
+        "selectedIconPath": "pages/image/tubiao/clipboard45.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "pages/image/tubiao/administrator.png",
+        "selectedIconPath": "pages/image/tubiao/administrator.png"
+      }
+    ]
+  }
+}

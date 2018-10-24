@@ -1,0 +1,54 @@
+/* pages/user/user */
+.top{
+  height: 60rpx;
+  width:100%;
+  background: rgb(228, 228, 240);
+}
+.zhanghao{
+  height: 60rpx;
+  width: 200rpx;
+  font-size: 40rpx;
+  line-height: 60rpx;
+  margin-left: 270rpx;
+}
+.updateUser{
+  height: 60rpx;
+  width: 230rpx;
+  color: green;
+  right: 10rpx;
+  float: right;
+  font-size: 40rpx;
+  margin-top: -60rpx;
+  line-height: 60rpx;
+  background: rgb(228, 228, 240);
+}
+.image{
+  margin-top: 40rpx;
+  height: 200rpx; 
+  margin-bottom: -40rpx;     
+}
+.avator{
+  height: 160rpx;
+  width: 160rpx;
+  margin-left: 40%;
+  border-radius: 50%;
+}
+.center{
+  width: 100%;
+  height: 300rpx;
+  background: rgb(228, 228, 240);
+  margin-top: 40rpx;
+}
+.center_one{
+  width: 100%;
+  height: 100rpx;
+  border-bottom: solid 1rpx;
+  border-color: rgb(148, 148, 143);
+  border-block-end-width: 100%;
+  line-height: 100rpx;
+  margin-left: 20rpx;
+}
+.float{
+  float: right;
+  margin-right: 50rpx;
+}

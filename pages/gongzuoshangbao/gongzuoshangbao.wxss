@@ -1,0 +1,35 @@
+/* pages/gongzuoshangbao/gongzuoshangbao.wxss */
+.top{
+  height: 80rpx;
+  width: 100%;
+  background-color: rgb(236, 237, 238);
+  position: fixed;
+  text-align: center;
+}
+text{
+  font-weight: bold;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 80rpx;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 15rpx;
+  left: 15rpx;
+  font-family: sans-serif;
+}
+.date{
+  display: flex;
+  flex-direction: row;
+}
+.image{
+  position: absolute;
+  left: 650rpx;
+}

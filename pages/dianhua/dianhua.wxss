@@ -1,0 +1,18 @@
+/* pages/dianhua/dianhua.wxss */
+.main{
+  display: flex;
+  flex-direction: column;
+
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 15rpx;
+}
+.phone{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 560rpx;
+}

@@ -1,0 +1,94 @@
+<view  wx:if="{{!success}}">
+  <view>
+    <view class='title'>故障类型</view>
+    <view>
+      <picker bindchange="LXbindPickerChange"  value="{{leixing[lx_index].id}}" range="{{leixing}}" range-key="{{'fault_name'}}">
+        <view class="picker">
+          {{leixing[lx_index].fault_name}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view>
+    <view class='title'>报修单位</view>
+    <view>
+      <picker bindchange="bindPickerChange"  value="{{danwei[index].id}}" range="{{danwei}}" range-key="{{'department_name'}}">
+        <view class="picker">
+          {{danwei[index].department_name}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view>
+    <view class='title'>报修描述</view>
+    <view class="page-section">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" auto-focus placeholder="输入报修描述" type='text' bindblur='describe'/>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <view class='title'>报修人</view>
+    <view class="page-section">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" auto-focus placeholder="输入报修人，只接收汉字" bindblur='personName' />
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <view class='title'>反馈电话</view>
+    <view class="page-section">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" type='number' placeholder="输入反馈电话，只接收数字" bindblur='phone' />
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <view class='title'>报修位置</view>
+   <view>
+      <picker bindchange="WZbindPickerChange"  value="{{weizhi[wz_index].id}}" range="{{weizhi}}" range-key="{{'location_name'}}">
+        <view class="picker">
+          {{weizhi[wz_index].location_name}}
+        </view>
+      </picker>
+    </view>
+  
+  </view>
+
+
+
+  <!-- <view>
+    <view class='title'>图片（选填，提供问题截图，10M以下）</view>
+    
+    <view class="weui-uploader__input-box">
+      <view class="weui-uploader__input" bindtap="chooseImage" bindtap="bindViewTap"></view>
+    </view>
+<image wx:for="{{avatarUrl}}" wx:key="unique" src="{{item}}" bindtap="previewImage"></image>
+
+<view>
+ <image wx:for="{{pictures}}" wx:key="unique"src="{{item}}" data-index="{{index}}" bindtap="previewImage"></image>
+</view>
+  </view> -->
+
+
+   <view>
+    <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="openConfirm"> 提交 </button>
+  </view>
+
+</view>
+
+<view wx:if="{{success}}">
+  <view class='success'> <icon type='success' size="24" class='success-icon'></icon>提交成功</view>
+  <button type="primary"  bindtap="handleBackTap" > 返回首页 </button>
+</view>

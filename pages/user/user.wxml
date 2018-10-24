@@ -1,0 +1,19 @@
+<view >
+  <view class='top'>
+    <view class='zhanghao'>账号管理</view>
+    <button class='updateUser' bindtap='updateUser'>修改信息</button>
+  </view>
+  <view class='image'>
+    <image class='avator' src='{{avatarUrl}}'></image>
+  </view>
+  <view class='center'>
+    <view class='center_one'>姓名<view class='float'>{{nickName}}</view></view>
+    <view class='center_one'>登录账号<view class='float'>zhangsan@qq.com</view></view>
+    <view class='center_one'>登录密码<view class='float'>*******</view></view>
+  </view>
+  <view class='center'>
+    <view class='center_one'>所属部门<view class='float'>逸飞翔贵宾</view></view>
+    <view class='center_one'>联系方式<view class='float'>13385129612</view></view>
+    <view class='center_one'>邮箱地址<view class='float'>1398213687@163.com</view></view>
+  </view>
+</view>

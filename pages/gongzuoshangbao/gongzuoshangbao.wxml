@@ -1,0 +1,14 @@
+<view class='top'>工作上报清单</view>
+<view class='main'>
+  <view class='content'>
+    <view wx:for="{{list}}">
+      <view><text style=''>{{item.departmentName}}</text></view>
+      <view class='date'>
+        <view>上报时间：{{item.date}}</view>
+        <image class='image' src='/pages/image/jiantou.png' style='width:60rpx;height:60rpx'></image>
+      </view>
+      <view>工作描述：{{item.record}}</view>
+      <view class='line'></view>
+    </view>
+  </view>
+</view>

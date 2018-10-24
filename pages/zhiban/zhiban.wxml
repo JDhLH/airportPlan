@@ -1,0 +1,20 @@
+<view class='top'>值班表
+  <button bindtap='fanhui'><image class='FanHuiImage' src='/pages/image/jiantou_left.png' style='width:60rpx;height:60rpx' />
+  </button>
+</view>
+<view class='main'>
+<view class='content'>
+  <view class='line'></view> 
+  <view>
+    <view wx:for="{{list}}">
+    <view><text style=''>值班人员: {{item.name}},{{item.phone}}</text></view>
+    <view class='date'>
+    <view>科室: {{item.department}}</view>
+    <image class='image' src='/pages/image/jiantou.png' style='width:60rpx;height:60rpx'></image>
+    </view>
+    <view >时间: {{item.datetime}}</view>
+    <view class='line'></view>
+    </view>
+  </view>
+</view>
+</view>

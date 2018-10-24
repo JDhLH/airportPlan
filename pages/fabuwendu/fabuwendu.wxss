@@ -1,0 +1,44 @@
+.title{
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+  padding-left: 10px;
+}
+
+.info{
+ display: flex;
+ flex-direction: row;
+}
+.row{
+  width: 100px;
+  float: left;
+}
+.info-input{
+  height: 50px;
+}
+.picker{
+ line-height: 50px;
+  border-bottom: 1px solid #ccc;
+  padding-left: 10px;
+}
+
+.button{
+  margin: 10px 8px 0 8px;
+  line-height: 50px;
+  border-radius: 6px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background: rgb(39, 196, 0);
+}
+
+.success{
+  text-align: center;
+  line-height: 100px;
+  font-size:20px;
+}
+
+success-icon{
+  position: relative;
+  top:10px;
+  margin-right: 10px;
+
+}
