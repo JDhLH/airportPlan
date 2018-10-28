@@ -1,4 +1,6 @@
 // pages/gongzuoshangbao/gongzuoshangbao.js
+
+var config = require('../../config');
 Page({
 
   /**
@@ -30,7 +32,7 @@ Page({
   },
   getReport(){
     wx.request({
-      url: 'https://224r34952t.51mypc.cn/findAllReport',
+      url: config.service.findAllReportUrl,
       mothod: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"

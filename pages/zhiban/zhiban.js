@@ -1,5 +1,6 @@
 // pages/zhiban/zhiban.js
-var util = require('../../utils/util.js')
+var util = require('../../utils/util.js');
+var config = require('../../config');
 Page({
   /**
    * 页面的初始数据
@@ -18,7 +19,7 @@ Page({
   },
   getduty(){
     wx.request({
-      url: 'https://224r34952t.51mypc.cn/findAllDuty',
+      url: config.service.getAllDutyUrl,
       mothod: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"

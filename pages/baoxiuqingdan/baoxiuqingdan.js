@@ -1,5 +1,6 @@
 // pages/baoxiuqingdan/baoxiuqingdan.js
 var sliderWidth = 96;
+var config = require('../../config');
 Page({
 
   /**

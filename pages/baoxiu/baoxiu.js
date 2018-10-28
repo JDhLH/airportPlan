@@ -1,4 +1,5 @@
 // pages/baoxiu/baoxiu.js
+var config = require('../../config');
 Page({
 
   /**
@@ -33,25 +34,12 @@ Page({
     des: '',
     
   },
-  // chooseImage: function (e) {
-  //   var that = this;
-  //   wx.chooseImage({
-  //     sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
-  //     sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-  //     success: function (res) {
-  //       // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-  //       that.setData({
-  //         files: that.data.files.concat(res.tempFilePaths)
-  //       });
-  //     }
-  //   })
-  // },
-  // previewImage: function (e) {
-  //   wx.previewImage({
-  //     current: e.currentTarget.id, // 当前显示图片的http链接
-  //     urls: this.data.files // 需要预览的图片http链接列表
-  //   })
-  // },
+  previewImage: function (e) {
+    wx.previewImage({
+      current: e.currentTarget.id, // 当前显示图片的http链接
+      urls: this.data.files // 需要预览的图片http链接列表
+    })
+  },
 
   baoxiuInfoIn:function(res){
     console.log(res);
@@ -83,7 +71,7 @@ Page({
       return;
     }
     wx.request({
-      url: 'https://224r34952t.51mypc.cn/rpInsertInfo',
+      url: config.service.insertRepairUrl,
       header: {
         'Content-Type': 'application/json'
       },
@@ -100,7 +88,7 @@ Page({
         department_id: this.data.department_id,
         aceept_person_id: 10002,
         comments: '待审核',
-        img: ''
+        img: this.data.avatarUrl
       },
       success: function (res) {
         var list = res.data;
@@ -118,28 +106,7 @@ Page({
         }
       }
     })
-    // wx.uploadFile({
-    //   url: 'https://224r34952t.51mypc.cn/upload/picture',
-    //   filePath: that.data.avatarUrl[0],//图片路径，如tempFilePaths[0]
-    //   name: 'file',
-    //   header: {
-    //     "Content-Type": "multipart/form-data"
-    //   },
-    //   formData:
-    //     {
-    //       userId: 12345678 //附加信息为用户ID
-    //     },
-    //   success: function (res) {
-    //     console.log(res);
-
-    //   },
-    //   fail: function (res) {
-    //     console.log(res);
-    //   },
-    //   complete: function (res) {
-
-    //   }
-    // })
+   
 
 
   },
@@ -190,7 +157,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'https://224r34952t.51mypc.cn/dmFindAll',
+      url: config.service.getAllDepartmentUrl,
       header: {
         'Content-Type': 'application/json'
       },
@@ -214,7 +181,7 @@ Page({
       }
     });
     wx.request({
-      url: 'https://224r34952t.51mypc.cn/ftFindAll',
+      url: config.service.getAllFaultTypeUrl,
       header: {
         'Content-Type': 'application/json'
       },
@@ -238,7 +205,7 @@ Page({
     });
     var that = this;
     wx.request({
-      url: 'https://224r34952t.51mypc.cn/lcFindAll',
+      url: config.service.getAllLocationUrl,
       header: {
         'Content-Type': 'application/json'
       },
@@ -313,5 +280,70 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  bindViewTap: function () {
+    var that = this;
+    wx.chooseImage({
+      // 设置最多可以选择的图片张数，默认9,如果我们设置了多张,那么接收时//就不在是单个变量了,
+      count: 1,
+      sizeType: ['original', 'compressed'], // original 原图，compressed 压缩图，默认二者都有
+      sourceType: ['album', 'camera'], // album 从相册选图，camera 使用相机，默认二者都有
+      success: function (res) {
+        // 获取成功,将获取到的地址赋值给临时变量
+
+        var tempFilePaths = res.tempFilePaths;
+        console.log("---->tempFilePaths:" + that.data.files.concat(res.tempFilePaths));
+        that.setData({
+          //将临时变量赋值给已经在data中定义好的变量
+          avatarUrl: res.tempFilePaths
+        })
+   
+        console.log(that.data.avatarUrl[0])
+
+
+        wx.uploadFile({
+        //  url: 'https://224r34952t.51mypc.cn/upload/picture',
+          url: 'http://localhost:8080/upload/picture',
+          filePath: that.data.avatarUrl[0],//图片路径，如tempFilePaths[0]
+          name: 'image',
+          header: {
+            "Content-Type": "multipart/form-data",
+
+          },
+        /*  formData:
+            {
+              userId: 12345678 //附加信息为用户ID
+            },*/
+          success: function (res) {
+            console.log("执行提交图片成功",res);
+          },
+          fail: function (res) {
+            console.log(res);
+          },
+          complete: function (res) {
+            console.log(res);
+          }
+        })
+      },
+      fail: function (res) {
+        // fail
+      },
+      complete: function (res) {
+        // complete
+      }
+    })
+  },
+  previewImage: function (e) {
+    var that = this,
+      //获取当前图片的下表
+      index = e.currentTarget.dataset.index,
+      //数据源
+      pictures = this.data.pictures;
+    wx.previewImage({
+      //当前显示下表
+      current: pictures[index],
+      //数据源
+      urls: pictures
+    })
   }
 })

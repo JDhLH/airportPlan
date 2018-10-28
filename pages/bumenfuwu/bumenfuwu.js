@@ -1,4 +1,5 @@
 // pages/bumenfuwu/bumenfuwu.js
+var config = require('../../config');
 Page({
 
   /**
@@ -28,7 +29,7 @@ Page({
   onShow: function () {
     var that = this;
     wx.request({
-      url: 'https://224r34952t.51mypc.cn/sdFindController',
+      url: config.service.getAllDepartmentServiceUrl,
       header: {//
         'Content-Type': 'application/json'
       },

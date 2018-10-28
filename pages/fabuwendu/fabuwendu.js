@@ -1,3 +1,5 @@
+//pages/fabuwendu/fubuwendu.js
+var config = require('../../config');
 Page({
   data: {
     id:'',
@@ -47,7 +49,7 @@ Page({
       return;
     }
     wx.request({
-      url: 'https://224r34952t.51mypc.cn/temUpdate',
+      url: config.service.updateTemperatureUrl,
       data: {
         id: this.id,
         tem: this.staticData.Temp,

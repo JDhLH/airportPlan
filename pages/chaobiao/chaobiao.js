@@ -1,4 +1,5 @@
 // pages/chaobiao/chaobiao.js
+var config = require('../../config');
 Page({
 
   /**
@@ -28,7 +29,7 @@ Page({
   onShow: function () {
     var that = this;
     wx.request({
-      url: 'https://224r34952t.51mypc.cn/wmFindAll',
+      url: config.service.getAllReportUrl,
       header: {
         'Content-Type': 'application/json'
       },

@@ -1,4 +1,5 @@
 // pages/wendu/wendu.js
+var config = require('../../config');
 Page({
 
   /**
@@ -63,7 +64,7 @@ Page({
 
   getTem() {
     wx.request({
-      url: 'https://224r34952t.51mypc.cn/temFindAll',
+      url: config.service.getAllTemperatureUrl,
       mothod: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"

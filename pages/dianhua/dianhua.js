@@ -1,4 +1,5 @@
 // pages/dianhua/dianhua.js
+var config = require('../../config');
 Page({
 
   phoneCall: function (e) {
@@ -40,7 +41,7 @@ Page({
   onShow: function () {
     var that = this;
     wx.request({
-      url: 'https://224r34952t.51mypc.cn/sdFindPhoneController',
+      url: config.service.getAllPhoneUrl,
       header: {
         'Content-Type': 'application/json'
       },
