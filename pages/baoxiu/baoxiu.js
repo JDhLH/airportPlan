@@ -298,22 +298,19 @@ Page({
           avatarUrl: res.tempFilePaths
         })
    
-        console.log(that.data.avatarUrl[0])
-
-
+        console.log(that.data.avatarUrl[0]);
         wx.uploadFile({
-        //  url: 'https://224r34952t.51mypc.cn/upload/picture',
-          url: 'http://localhost:8080/upload/picture',
+          url: config.service.uploadImageUrl,
           filePath: that.data.avatarUrl[0],//图片路径，如tempFilePaths[0]
           name: 'image',
           header: {
             "Content-Type": "multipart/form-data",
 
           },
-        /*  formData:
+          formData:
             {
               userId: 12345678 //附加信息为用户ID
-            },*/
+            },
           success: function (res) {
             console.log("执行提交图片成功",res);
           },

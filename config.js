@@ -36,7 +36,8 @@ var config = {
     getAllTemperatureUrl: `${host}/temFindAll`,
     //获取所有的值班信息
     getAllDutyUrl: `${host}/findAllDuty`,
-
+    //获取上传图片的路径
+    uploadImageUrl: `${host}/upload/picture`,
   }
 };
 module.exports = config;
