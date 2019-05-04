@@ -30,7 +30,6 @@ Page({
     location_id:1,
     describe:'',
     personName:'',
-    phone:'',
     des: '',
     
   },

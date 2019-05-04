@@ -2,8 +2,8 @@
  * 小程序配置文件
  */
 //此处主机域名修改腾讯云解决方案分配的域名
-var host = 'https://224r34952t.51mypc.cn';
-
+// var host = 'https://djstudy.club:8443';
+ var host ='http://localhost:8080';
 var config = {
   //下面的地址配合云端Demo工作
   service:{
@@ -36,8 +36,14 @@ var config = {
     getAllTemperatureUrl: `${host}/temFindAll`,
     //获取所有的值班信息
     getAllDutyUrl: `${host}/findAllDuty`,
-    //获取上传图片的路径
-    uploadImageUrl: `${host}/upload/picture`,
+    // //获取上传图片的路径
+    // uploadImageUrl: `${host}/upload/picture`,
+	 //获取所以的待审核的路径
+	  getAllpreReviewFun:`${host}/findAllPreView`,
+	  //
+	  getAllPendingFun:`${host}/findAllPending`,
+	  //
+	  getAllCompletedFun:`${host}/findCompleted`
   }
 };
 module.exports = config;

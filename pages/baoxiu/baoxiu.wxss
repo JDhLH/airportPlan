@@ -6,12 +6,13 @@
   justify-content: space-around;
 }
 .picker{
-  height:100rpx;
+  height:80rpx;
   text-align: center;
   border: 1px solid lightgray;
 }
 .weui-input{
   width: 100%;
+  background-color:rgb(240, 176, 176); 
   
 }
 .section{
@@ -46,6 +47,9 @@ textarea {
 .title{
   height: 80rpx;
   background-color:   #eaeae1;
+  font-family: "华文楷体";
+  color: black;
+  font-size: 20px;
 }
 .success{
   text-align: center;

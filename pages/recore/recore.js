@@ -35,7 +35,7 @@ Page({
   onShow: function () {
     var that = this;
     wx.request({
-      url: config.service.getAllNoticeUrl,
+      url: config.service.getAllRecoreUrl,
       header: {//
         'Content-Type': 'application/json'
       },
@@ -47,6 +47,7 @@ Page({
         console.log(list);
         for (var index in list) {
           var d = new Date(list[index].time);//不调用这个会出现其中给一个函数没有定义的问题
+		  console.log(d);
           /*result[index].dateTime = util.formatTime(commentTime,'Y-M-D');*/
           var times = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
           list[index].time = times;

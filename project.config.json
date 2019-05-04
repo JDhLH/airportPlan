@@ -9,13 +9,16 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.1.1",
 	"appid": "wxdd1ef2de28991fa4",
 	"projectname": "%E6%9C%BA%E5%9C%BA%E4%BF%9D%E4%BF%AE",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

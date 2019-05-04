@@ -1,3 +1,4 @@
+<view class='weui-toptips  '>
 <view  wx:if="{{!success}}">
   <view>
     <view class='title'>故障类型</view>
@@ -69,25 +70,25 @@
 
 
   <view>
-    <view class='title'>图片（选填，提供问题截图，10M以下）</view>
+	<view class='title'>图片（选填，提供问题截图，10M以下）</view>
     
-    <view class="weui-uploader__input-box">
-      <view class="weui-uploader__input"  bindtap="bindViewTap" ></view>
-    </view>
-<image wx:for="{{avatarUrl}}" wx:key="unique" src="{{item}}" bindtap="previewImage"></image>
-
+    	<view class="weui-uploader__input-box">
+      		<view class="weui-uploader__input"  bindtap="bindViewTap" ></view>
+	</view>
+	<image wx:for="{{avatarUrl}}" wx:key="unique" src="{{item}}" 			         		bindtap="previewImage"></image>
 <view>
- <image wx:for="{{pictures}}" wx:key="unique"src="{{item}}" data-index="{{index}}" bindtap="previewImage"></image>
+ <!-- <image wx:for="{{pictures}}" wx:key="unique"src="{{item}}" data-index="{{index}}" bindtap="previewImage"></image> -->
 </view>
   </view>
 
 
-   <view>
-    <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="openConfirm"> 提交 </button>
-  </view>
+	<view>
+    		<button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="openConfirm"> 提交 </button>
+  	</view>
 </view>
 
 <view wx:if="{{success}}">
   <view class='success'> <icon type='success' size="24" class='success-icon'></icon>提交成功</view>
   <button type="primary"  bindtap="handleBackTap" > 返回首页 </button>
+</view>
 </view>

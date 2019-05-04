@@ -1,4 +1,4 @@
-<view class="container">
+<view class="weui-toptips ">
   <view class="sug_info">
     <!-- <text>{{sugData}}</text> -->
   </view>
@@ -14,10 +14,10 @@
   <view class='separator'></view>
   <view class='hotgoodcontainer'>
     <view class='gooditem' bindtap='redirto' data-pagename="{{good.pagename}}" wx:for="{{hotgoods}}" wx:for-index="idx" wx:for-item="good">
-      <view class='imgview'>
-        <image class='productimg' src='{{good.pic_url}}' />
+      <view class='flex_item'>
+        <image class='placeholder' src='{{good.pic_url}}' />
       </view>
-      <view>{{good.name}}</view>
+     <p class="weui-grid__label">{{good.name}}</p>
     </view>
   </view>
 </view>

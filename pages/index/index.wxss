@@ -100,10 +100,10 @@ seach .confirm{
     border: 0.5px solid #e2e2e3;
     padding-bottom:10px
 }
-.productimg{
+/* .productimg{
    width:80px;
    height:80px;
-}
+} */
 .imgview{
   width:80px;
   height:80px;
@@ -113,4 +113,25 @@ seach .confirm{
 }
 .title{
   margin-left: 180rpx;
+}
+.flex_item{
+    position: relative;
+    float: left;
+    /* padding: 20px 10px; */
+    width: 33.33333333%;
+    box-sizing: border-box;
+}
+.placeholder{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;   
+}
+.weui-grid__label {
+    display: block;
+    text-align: center;
+    color: #000000;
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }

@@ -37,7 +37,7 @@ Page({
     hotgoods: [{
         "name": "故障报修",
         "pic_url": "/pages/image/tubiao/tools.png",
-        "pagename": "baoxiu"
+        "pagename": "guarantee"
       },
       {
         "name": "报修记录",
