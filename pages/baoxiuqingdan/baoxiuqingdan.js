@@ -8,10 +8,10 @@ Page({
    */
   data: {
     tabs: ["未受理", "已受理", "已完成"],
-    activeIndex: 1,
+    activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
-	 preReview: '测试',
+	 preReview: '',
 	 pending: '',
 	 completed: ''
   },
@@ -86,7 +86,19 @@ Page({
 			method: 'GET',
 			// data: {},
 			success: function (res) {
-				
+				var list = res.data;
+				if (list == null) {
+					var toastText = '获取数据失败' + res.data.errMsg;
+					wx.showToast({
+						title: toastText,
+						icon: 'loading',
+						duration: 2000 //弹出时间
+					})
+				} else {
+					that.setData({
+						pending: list
+					});
+				}
 			}
 		})  
 	},
@@ -101,7 +113,19 @@ Page({
 			method: 'GET',
 			// data: {},
 			success: function (res) {
-				
+				var list = res.data;
+				if (list == null) {
+					var toastText = '获取数据失败' + res.data.errMsg;
+					wx.showToast({
+						title: toastText,
+						icon: 'loading',
+						duration: 2000 //弹出时间
+					})
+				} else {
+					that.setData({
+						completed: list
+					});
+				}
 			}
 		})  
 	},

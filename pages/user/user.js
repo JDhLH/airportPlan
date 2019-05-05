@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    avatarUrl:"",
-    nickName:""
+    avatarUrl:'',
+    nickName:''
   },
 
   /**
@@ -27,9 +27,9 @@ Page({
    */
   onShow: function () {
     var userInfo = app.globalData.userInfo;
-    console.log(userInfo);
+   //  console.log(userInfo);
     var that=this;
-    this.setData({
+    that.setData({
       avatarUrl:userInfo.avatarUrl,
       nickName:userInfo.nickName
     })

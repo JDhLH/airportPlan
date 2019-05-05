@@ -23,8 +23,32 @@
                   <view class='line'></view>
                </view>
             </view>
-            <view class="weui-tab__content" hidden="{{activeIndex != 1}}">处理结果</view>
-            <view class="weui-tab__content" hidden="{{activeIndex != 2}}">工作评价</view>
+            <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+					<view wx:for="{{pending}}" wx:for-item="item">
+                  <view  class='recorelist' bindtap='topage' data-id='{{item.id}}' >
+                     <view class='title'>
+                        <view>{{item.describe_info}}</view>
+                        <view class='status'>{{item.result}}</view>
+                     </view>
+                     <view>报修时间：{{item.time}}</view>
+                     <!-- <view>故障类型：{{item.faultType.fault_name}}</view> -->
+                  </view>
+                  <view class='line'></view>
+               </view>
+				</view>
+            <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+					<view wx:for="{{completed}}" wx:for-item="item">
+                  <view  class='recorelist' bindtap='topage' data-id='{{item.id}}' >
+                     <view class='title'>
+                        <view>{{item.describe_info}}</view>
+                        <view class='status'>{{item.result}}</view>
+                     </view>
+                     <view>报修时间：{{item.time}}</view>
+                     <!-- <view>故障类型：{{item.faultType.fault_name}}</view> -->
+                  </view>
+                  <view class='line'></view>
+               </view>
+				</view>
          </view>
       </view>
    </view>

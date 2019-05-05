@@ -18,11 +18,11 @@ Page({
         if (res.authSetting['scope.userInfo']) {
           wx.getUserInfo({
             success: function (res) {
-              console.log(res);
+            //   console.log(res);
               //从数据库获取用户信息                            
               // that.queryUsreInfo();
               //用户已经授权过 
-              console.log("222");                           
+            //   console.log("222");                           
               wx.switchTab({
                 url: '/pages/index/index',
               })
@@ -33,7 +33,7 @@ Page({
     })
   },
   bindGetUserInfo: function (e) {
-    console.log(e);
+   //  console.log(e);
     if (e.detail.userInfo) {
       //用户登录暗恋允许授权按钮
       var that = this;
@@ -56,7 +56,7 @@ Page({
       //     console.log("插入小程序登录用户信息成功");
       //   }
       // });
-      console.log("111");
+      // console.log("111");
       wx.switchTab({
         url: '/pages/index/index',
       })
